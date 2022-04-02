@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Unit 2 Assessment</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Grocery List</h1>
+    <ul>
+      <% list.forEach(function(i) { %>
+        <li>
+ 
+          <%= i.item %>
+            - 
+          <%= i.done %>
+       
+
+        </li>
+      <% }); %>
+    </ul>
+    <hr>
+    <h1>New item</h1>
+    <form action="/list" method="POST" autocomplete="off">
+      <input type="text" name="item">
+      <input type="text" name="done">
+      <button type="submit">Save item</button>
+    </form>
+  </body>
+</html>
